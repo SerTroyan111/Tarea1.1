@@ -26,5 +26,5 @@ class Empleado
 
 void sumassalarios(int salarios)
 {
-
+  int salarios;
 }
