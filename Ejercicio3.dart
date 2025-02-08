@@ -5,26 +5,41 @@
 
 void main()
 {
-  Empleado e1 = Empleado("Sergio", "Programador", 15000);
-  Empleado e2 = Empleado("Maria", "Marketing", 20000);
-  Empleado e3 = Empleado("Juan", "Inventario", 25000);
+  List<Empleado> empleados = 
+  [
+    Empleado(nombre: "Sergio", puesto: "Programador", salario: 13000.0),
+    Empleado(nombre: "Juan", puesto: "Inventario", salario: 12500.0),
+    Empleado(nombre: "David", puesto: "Contabilidad", salario: 12500.0),
+  ];
+
+  double salariostotales = calcularSalarioTotal(empleados);
+  double salariopromedio = calcularSalarioPromedio(empleados);
+
+  print("Salario total: ${salariostotales.toStringAsFixed(2)}"); //asfixed es para mostrar los valores tipo xx.xx
+  print("Salario promedio: ${salariopromedio.toStringAsFixed(2)}");//asfixed es para mostrar los valores tipo xx.xx
 }
 
-class Empleado
+class Empleado 
 {
-  late String nombre;
-  late String puesto;
-  late int salario;
+  String nombre;
+  String puesto;
+  double salario;
 
-  Empleado(String nombre, String puesto, int salario)
-  {
-    this.nombre = nombre;
-    this.puesto = puesto;
-    this.salario = salario;
-  }
+  Empleado
+  ({
+      required this.nombre,
+      required this.puesto,
+      required this.salario
+  });
 }
 
-void sumassalarios(int salarios)
+double calcularSalarioTotal(List<Empleado> empT)
 {
-  int salarios;
+  return empT.fold(0, (total, empleado) => total + empleado.salario);
+}
+
+double calcularSalarioPromedio(List<Empleado> empP)
+{
+  if (empP.isEmpty) return 0.0;
+  return calcularSalarioTotal(empP) / empP.length;
 }

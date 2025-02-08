@@ -1,0 +1,2 @@
+//Cree una clase CuentaBancaria que tenga las propiedades titular y saldo.
+//Implemente métodos para: Depositar dinero, Retirar dinero (asegurándote de que el saldo no sea negativo) y Consultar el saldo.
