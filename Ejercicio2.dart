@@ -1,4 +1,4 @@
-//Sergio Rolando Inestroza Amaya
+//Sergio Rolando Inestroza Amaya 20182002621
 //Ejercicio 2
 //Crea un programa que devuelva una lista con todos los elementos unicos de otra lista
 

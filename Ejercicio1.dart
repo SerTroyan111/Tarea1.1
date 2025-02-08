@@ -1,4 +1,4 @@
-//Sergio Rolando Inestroza Amaya
+//Sergio Rolando Inestroza Amaya 20182002621
 //Ejercicio 1
 //Crea un programa el cual imprima una lista con los primeros 15 numeros de la sucesion Fibonacci
 
