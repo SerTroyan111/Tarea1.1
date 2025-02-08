@@ -11,13 +11,22 @@ void main()
 
 class Libro
 {
-  late String titulo;
-  late String autor;
-  late String anioPublicacion;
+  String titulo;
+  String autor;
+  String anioPublicacion;
+
+  Libro
+  ({
+    required this.titulo,
+    required this.autor,
+    required this.anioPublicacion
+  });
 }
+
 
 class Biblioteca
 {
+  List <String> libros = [];
   void agregarlibro()
   {
 
